@@ -1,0 +1,14 @@
+<div class="alert-dialog">
+    <div class="alert-header">
+      <i class="material-icons">error_outline</i> <!-- Icône d'alerte (utilisez une icône de votre choix) -->
+      <h2>Alerte</h2>
+    </div>
+    <div class="alert-content">
+      <!-- Contenu de l'alerte -->
+      {{ data.message }}
+    </div>
+    <div class="alert-footer">
+      <button class="close-button" (click)="closeDialog()">Fermer</button>
+    </div>
+  </div>
+  

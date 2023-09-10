@@ -1,0 +1,107 @@
+/* Styling for the header */
+header {
+  background-color: #dd9818;
+  color: white;
+}
+
+.mat-toolbar {
+  background-color: #dd9818;
+  height: auto;
+}
+
+.mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Styling for expansion panels on hover */
+.mat-expansion-panel:hover {
+  transform: scale(1.02); /* Increase scale on hover */
+  transition: transform 0.2s ease; /* Add transition for smooth effect */
+}
+
+
+.example-spacer {
+  flex: 1;
+}
+
+.example-icon {
+  color: white;
+}
+
+/* Styling for the expansion panels */
+.expansion-panel {
+  background-color: white;
+  box-shadow: none;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.mat-expansion-panel-header {
+  background-color: #dd9818;
+  color: white;
+  cursor: pointer;
+}
+
+.mat-expansion-panel-header:hover {
+  background-color: #c17000;
+}
+
+.panel-content {
+  padding: 10px;
+}
+
+.panel-button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  margin: 5px 0;
+  color: #333;
+  text-align: left;
+}
+
+.panel-button:hover {
+  background-color: transparent;
+}
+
+/* Styling for the main body */
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the router outlet */
+router-outlet {
+  margin-top: 20px;
+}
+
+/* Styling for the footer */
+footer {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+/* Styling for the expansion panels */
+.expansion-panel {
+  background-color: white;
+  box-shadow: none;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s; /* Add transition for the scaling effect */
+}
+
+.mat-expansion-panel-header {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.2s; /* Add transition for the background color change */
+}
+
+.mat-expansion-panel-header:hover {
+  background-color: #f0f0f0;
+}
+
+.mat-expansion-panel-header:hover .mat-expansion-indicator {
+  transform: scale(1.1); /* Scale the indicator on hover */
+}

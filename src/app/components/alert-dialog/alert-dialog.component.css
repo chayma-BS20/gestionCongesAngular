@@ -1,0 +1,55 @@
+.alert-dialog {
+    border-radius: 20px; /* Coins plus arrondis pour un aspect plus rond */
+    padding: 20px; /* Espacement interne */
+    max-width: 400px; /* Largeur maximale de l'alerte */
+    margin: 0 auto; /* Centre l'alerte horizontalement */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    border: 2px solid #dc3545; /* Bordure de l'alerte (ajoutée) */
+  }
+  
+  
+  .alert-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+
+  }
+  
+  .alert-header i {
+    font-size: 32px; /* Taille de l'icône plus grande */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    color: #dc3545; /* Couleur de l'icône */
+    border-radius: 50%; /* Rend l'icône plus ronde */
+    padding: 10px; /* Espacement interne de l'icône */
+
+  }
+  
+  .alert-header h2 {
+    font-size: 18px; /* Taille du titre de l'alerte */
+    margin: 0; /* Supprime les marges par défaut */
+    color: #dc3545; /* Couleur du titre */
+  }
+  
+  .alert-content {
+    font-size: 16px; /* Taille du texte de contenu */
+    margin-bottom: 20px; /* Espacement sous le contenu */
+  }
+  
+  .alert-footer {
+    text-align: right; /* Alignement du bouton de fermeture à droite */
+  }
+  
+  .close-button {
+    background-color: #dc3545; /* Couleur de fond du bouton de fermeture (rouge dans cet exemple) */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Supprime la bordure du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Curseur de la main au survol */
+  }
+  
+  .close-button:hover {
+    background-color: #c82333; /* Couleur de fond au survol */
+  }
+  

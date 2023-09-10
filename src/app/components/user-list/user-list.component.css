@@ -1,0 +1,56 @@
+/* Styling for the filter input */
+mat-form-field {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Styling for the table container */
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  /* Styling for table header */
+  .mat-header-cell {
+    font-weight: bold;
+  }
+  
+  /* Styling for table rows */
+  .mat-row {
+    transition: background-color 0.2s;
+  }
+  /* Ajout de bordures et style au tableau */
+.table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #694B00;
+
+}
+.fail-snackbar {
+  background-color: #ff0000; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  font-weight: bold; /* Gras pour le texte */
+}
+
+  .mat-row:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+  }
+  
+  /* Styling for no data row */
+  .mat-row.mat-no-data {
+    color: #000000;
+  }
+  
+  /* Styling for paginator */
+  .mat-paginator {
+    margin-top: 20px;
+  }
+  

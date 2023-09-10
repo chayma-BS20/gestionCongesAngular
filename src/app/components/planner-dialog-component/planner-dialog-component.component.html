@@ -1,0 +1,40 @@
+<!-- planner-dialog-component.component.html -->
+
+<div class="planner-dialog">
+  <h2>{{message}}</h2>
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="dateDebut">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de début </th>
+      <td mat-cell *matCellDef="let conge"> {{ conge.dateDebut | date: 'dd/MM/yyyy' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateFin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de fin </th>
+      <td mat-cell *matCellDef="let conge"> {{ conge.dateFin | date: 'dd/MM/yyyy' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+      <td mat-cell *matCellDef="let conge"> {{ conge.type }} </td>
+    </ng-container>
+
+    <!-- Ajoutez d'autres colonnes pour d'autres propriétés de congé si nécessaire -->
+
+    <ng-container matColumnDef="Supprimer">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Supprimer </th>
+      <td mat-cell *matCellDef="let conge">
+        <button mat-icon-button color="warn" (click)="deleteConge(conge.idConges)">
+          <mat-icon>delete</mat-icon>
+        </button>      </td>
+    </ng-container>
+
+    <!-- Définissez les colonnes à afficher dans l'en-tête et dans les lignes de tableau -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let conge; columns: displayedColumns"></tr>
+
+    <!-- Ligne affichée lorsqu'il n'y a aucune donnée correspondante. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" [attr.colspan]="displayedColumns.length">Aucun congé trouvé.</td>
+    </tr>
+  </table>
+</div>

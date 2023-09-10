@@ -1,0 +1,13 @@
+.diagram-container {
+  width: 1400px;
+  height: 1500px; /* Réglez la hauteur en pixels ou en pourcentage selon vos besoins */
+}
+/* Appliquez une bordure à chaque nœud */
+.gojs-diagram .node {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+

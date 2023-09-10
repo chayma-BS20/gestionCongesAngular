@@ -1,0 +1,18 @@
+<p>responsable works!</p>
+<div>
+    <h2>Test Get Responsables</h2>
+  
+  
+    <ul *ngIf="responsables.length > 0">
+      <li *ngFor="let responsable of responsables">
+        ID: {{ responsable.id_responsable }}, 
+        Responsable ID: {{ responsable.responsable.idUser }}, 
+        Structure ID: {{ responsable.structure.idsh }}, 
+        Date Debut: {{ responsable.dateDebut | date:'yyyy-MM-dd' }}, 
+        Date Fin: {{ responsable.dateFin | date:'yyyy-MM-dd' }}
+      </li>
+    </ul>
+    
+    <div *ngIf="responsables.length === 0">No responsables fetched.</div>
+  </div>
+  

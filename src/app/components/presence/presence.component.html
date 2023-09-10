@@ -1,0 +1,21 @@
+<p>presence works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Presence ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let presence of presences">
+            <td>{{ presence.idPresence }}</td>
+            <td>{{ presence.datePointage | date:'yyyy-MM-dd' }}</td>
+            <td>{{ presence.heurePointage | date:'HH:mm:ss' }}</td>
+            <td>{{ presence.user.nom }} {{ presence.user.prenom }}</td>
+        </tr>
+    </tbody>
+</table>
+

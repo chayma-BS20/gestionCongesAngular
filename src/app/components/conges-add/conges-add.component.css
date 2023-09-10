@@ -1,0 +1,55 @@
+/* Style du formulaire de congés */
+.custom-form {
+  border: 2px solid #fff; /* Couleur et épaisseur de la bordure */
+  padding: 20px; /* Espacement interne du formulaire */
+  margin: 0 auto; /* Centre le formulaire horizontalement */
+  max-width: 400px; /* Largeur maximale du formulaire */
+  display: flex; /* Activer le modèle de flexbox pour centrer verticalement */
+  flex-direction: column; /* Aligner les éléments verticalement */
+  justify-content: center; /* Centrer verticalement */
+  align-items: center; /* Centrer horizontalement */
+  height: 100vh; /* Utilisez 100% de la hauteur de la vue */
+  background-color: #f7f7f7; /* Couleur de fond */
+  width: 200%;
+
+}
+
+.custom-form .form-group {
+  margin-bottom: 20px;
+}
+
+.custom-form h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.custom-form label {
+  font-weight: bold;
+}
+
+.custom-form .form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
+.custom-form .mat-select {
+  width: 100%;
+}
+
+.custom-form .form-button {
+  width: 100%; /* Faites en sorte que les boutons occupent toute la largeur */
+  margin-top: 15px; /* Ajoute un espacement entre les boutons */
+  text-align: center; /* Centre les boutons horizontalement */
+  background-color: #dd9818; /* Couleur de fond orange pour le bouton */
+  
+}
+
+.custom-form .form-button:hover {
+  background-color: #c17000; /* Couleur de fond orange au survol */
+  border: 2px solid #fff; /* Couleur et épaisseur de la bordure */
+
+}

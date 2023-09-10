@@ -1,0 +1,13 @@
+<div class="popup-content">
+  <h2 class="mb-3">Détails du Congé</h2>
+  <div class="mb-3">
+    <p><strong>Nom de l'utilisateur:</strong> {{ nom }}</p>
+    <p><strong>Prénom de l'utilisateur:</strong> {{ prenom }}</p>
+    <p><strong>Solde restant:</strong> {{ reste }}</p>
+    <p><strong>Motif:</strong> {{ type }}</p>
+  </div>
+  <div class="text-center">
+    <button mat-raised-button class="mr-2 green-button" (click)="validerConge()">Valider</button>
+    <button mat-raised-button color="warn" (click)="supprimerConge()">Refuser</button>
+  </div>
+</div>

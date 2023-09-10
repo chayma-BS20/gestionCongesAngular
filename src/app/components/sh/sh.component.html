@@ -1,0 +1,36 @@
+<div class="main-body">
+  <div class="form-container custom-form">
+    <h1 class="form-title">Ajouter un nouveau département</h1>
+    <form (ngSubmit)="addStructure()" #form="ngForm">
+      <div class="form-group">
+        <label for="nomDepartement">Nom du département :</label>
+        <input
+          type="text"
+          id="nomDepartement"
+          name="nomDepartement"
+          class="form-control"
+          [(ngModel)]="newStructure.libelle"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="departementParent">Département parent :</label>
+        <select
+          id="departementParent"
+          name="departementParent"
+          class="form-control"
+          [(ngModel)]="selectedParentId"
+          (change)="onParentSelectChange()"
+        >
+          <option value="">Sélectionnez un département parent</option>
+          <option *ngFor="let departement of departementsExistantes" [value]="departement.idsh">
+            {{ departement.libelle }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="form-button">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>

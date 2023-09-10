@@ -1,0 +1,109 @@
+<div class="main-body" *ngIf="isAddFormVisible">
+    <div class="form-container">
+      <h1 class="form-title">Ajouter un employé</h1>
+      <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" class="row g-3">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Prenom</mat-label>
+            <input matInput type="text" placeholder="Ex. Chayma" formControlName="prenom">
+            <mat-error *ngIf="userForm?.get('prenom')?.invalid && (userForm?.get('prenom')?.dirty || userForm?.get('prenom')?.touched)">
+              <mat-icon>error</mat-icon> Le prenom est requis 
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Nom</mat-label>
+            <input matInput placeholder="Ex. ben saad" formControlName="nom">
+            <mat-error *ngIf="userForm?.get('nom')?.invalid && (userForm?.get('nom')?.dirty || userForm?.get('nom')?.touched)">
+              <mat-icon>error</mat-icon> Le nom est requis 
+            </mat-error>
+          </mat-form-field>
+          
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Ex. chayma.bs@example.com" formControlName="email">
+            <mat-error *ngIf="userForm?.get('email')?.invalid && (userForm?.get('email')?.dirty || userForm?.get('email')?.touched)">
+              <mat-icon>error</mat-icon> L' email est requis 
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Date de naissance</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dateDeNaissance">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="userForm?.get('dateDeNaissance')?.invalid && (userForm?.get('dateDeNaissance')?.dirty || userForm?.get('dateDeNaissance')?.touched)">
+              <mat-icon>error</mat-icon> Veuillez selectionner la date de naissance 
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <div class="radio-group">
+            <mat-label><b>Genre</b></mat-label>
+            <mat-radio-group aria-label="Selectionnez" formControlName="genre">
+              <mat-radio-button value="Homme">Homme</mat-radio-button>
+              <mat-radio-button value="Femme">Femme</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <mat-error *ngIf="userForm?.get('genre')?.invalid && (userForm?.get('genre')?.dirty || userForm?.get('genre')?.touched)">
+            <mat-icon>error</mat-icon> Veuillez selectionner le genre
+          </mat-error>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Role</mat-label>
+            <mat-select formControlName="role">
+              <mat-option *ngFor="let roleOption of roleOptions" [value]="roleOption">{{ roleOption }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="userForm?.get('role')?.invalid && (userForm?.get('role')?.dirty || userForm?.get('role')?.touched)">
+              <mat-icon>error</mat-icon> Veuillez selectionner le role
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>CIN</mat-label>
+            <input matInput placeholder="Ex. XXXXXXXX" formControlName="cin">
+            <mat-error *ngIf="userForm?.get('cin')?.invalid && (userForm?.get('cin')?.dirty || userForm?.get('cin')?.touched)">
+              <mat-icon>error</mat-icon> Le cin est requis
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Numero de telephone</mat-label>
+            <input matInput placeholder="Ex. 1234567890" formControlName="numeroTelephone">
+            <mat-error *ngIf="userForm?.get('numeroTelephone')?.invalid && (userForm?.get('numeroTelephone')?.dirty || userForm?.get('numeroTelephone')?.touched)">
+              <mat-icon>error</mat-icon> Le numero de telephone est requis
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Login</mat-label>
+            <input matInput placeholder="Ex. Chaymabb" formControlName="login">
+            <mat-error *ngIf="userForm?.get('login')?.invalid && (userForm?.get('login')?.dirty || userForm?.get('login')?.touched)">
+              <mat-icon>error</mat-icon> Le login est requis
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Mot De Passe</mat-label>
+            <input matInput type="password" formControlName="mdp">
+            <mat-error *ngIf="userForm?.get('mdp')?.invalid && (userForm?.get('mdp')?.dirty || userForm?.get('mdp')?.touched)">
+              <mat-icon>error</mat-icon> Veuillez saisir le mot de passe 
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <button mat-raised-button color="primary" type="submit" class="form-button" (click)="save()">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
